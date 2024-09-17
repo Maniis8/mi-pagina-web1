@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <title>Processing.JS dentro de pagina HTML</title>
+</head>
+
+<body>
+	<center> 
+<!-- Crear el canvas dentro de una página web -->
+	<canvas id="miLienzo" width="800" height="200"></canvas> 
+    <br>
+
+    <canvas id="miLienzo1" width="400" height="400"></canvas> 
+    <br>
+
+    <canvas id="miLienzo2" width="400" height="400"></canvas>
+    <br>
+
+    <canvas id="miLienzo3" width="400" height="400"></canvas>
+    <br>
+
+    <canvas id="miLienzo4" width="400" height="400"></canvas>
+    <br>
+
+    <canvas id="miLienzo5" width="400" height="400"></canvas>
+	</center>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+<script>
+	var txt = document.getElementById("miLienzo").getContext("2d"); // Instanciamos el elemento canvas
+        txt.font = "40px Tangiang";
+        txt.fillStyle = "#fc0394";
+        txt.fillText("Desafíos KhanAcademy", 200, 120);
+
+    var CodigoDePrograma1 = function (InstanciaProcessing) {
+        with (InstanciaProcessing) {
+        	size(400, 400); // Define el tamaño del canvas
+
+        	background(255, 0, 166);
+
+        	// Snowman boy 	
+        	ellipse(200, 320, 170, 150);
+			ellipse(200, 200, 135, 120);
+			ellipse(200, 110, 90, 80);
+
+			//hat 
+			rect(159, 10, 80, 60);
+			rect(150, 70, 100, 10);
+		}
+    };
+
+    var CodigoDePrograma2 = function (InstanciaProcessing) {
+        with (InstanciaProcessing) {
+        	size(400, 400); // Define el tamaño del canvas
+
+        	// The ground
+			background(2, 202, 209);
+			fill(51, 255, 0);
+			rect(0, 300, 400, 100);  
+
+			// The sun
+			fill(242, 255, 0);
+			ellipse(80, 64, 100, 100);  
+
+			// The snowman
+			fill(255, 252, 252);
+			ellipse(200, 300, 150, 150);
+			ellipse(200, 200, 100, 100);
+			ellipse(200, 120, 75, 75);
+
+        }
+    };
+
+    var CodigoDePrograma3 = function (InstanciaProcessing) {
+        with (InstanciaProcessing) {
+        	size(400, 400); // Define el tamaño del canvas
+            
+            background(255, 140, 0); // mesa 
+            ellipse(200, 200, 350, 350); // plato
+            ellipse(200, 200, 300, 300); 
+
+            // Lechuga de Base
+            fill(0, 128, 0); // verde para la lechuga
+            ellipse(200, 200, 295, 295);
+
+            // Tiras de pollo
+            noStroke();
+            fill(204, 153, 102); // color marrón claro para el pollo
+            rect(150,  90, 60, 20);
+            rect(240, 110, 70, 20);
+            rect(170, 140, 90, 20);
+            rect( 70, 170, 80, 20);
+            rect(200, 170, 60, 20);
+            rect(120, 210, 80, 20);
+            rect(250, 220, 90, 15);
+            rect(125, 275, 60, 20);
+            rect(200, 295, 60, 20);
+
+
+            // Tomates cherry
+            fill(255, 0, 0);
+            ellipse(120, 120, 40, 40);
+            ellipse(90, 160, 40, 40);
+            ellipse(300, 180, 40, 40);
+            ellipse(280, 265, 40, 40);
+            ellipse(160, 190, 40, 40);
+            ellipse(250, 125, 40, 40);
+            ellipse(200, 280, 40, 40);
+
+            // Rodajas de pepino
+            fill(144, 238, 144); // verde claro para los pepinos
+            ellipse(180, 130, 40, 15);
+            ellipse(230, 190, 40, 15);
+            ellipse(100, 230, 40, 15);
+            ellipse(280, 300, 40, 10);
+            ellipse(230, 240, 40, 15);
+        }
+    }; 
+
+    var CodigoDePrograma4 = function (InstanciaProcessing) {
+        with (InstanciaProcessing) {
+        	size(400, 400); // Define el tamaño del canvas
+
+        	background(255, 242, 3);
+        	var eyeSize = 20;
+			var toothSize =15;
+
+			ellipse(150, 70, 60, 120);  // left ear
+			ellipse(240, 70, 60, 120);  // right ear
+			fill(247, 175, 227);
+			ellipse(150, 80, 40, 100);   
+			ellipse(240, 80, 40, 100);   
+
+
+			fill(255, 255, 255);
+			ellipse(200, 170, 150, 150);    // face
+
+			fill(0, 0, 0);
+			ellipse(170, 150, eyeSize, eyeSize);  // left eye
+			ellipse(230, 150, eyeSize, eyeSize);  // right eye
+
+			line(150, 200, 250, 200);   // mouth
+
+			noFill();
+			rect(185, 200, 15, toothSize); // left tooth
+			rect(200, 200, 15, toothSize); // right tooth
+
+        }
+    };
+
+    var CodigoDePrograma5 = function (InstanciaProcessing) {
+        with (InstanciaProcessing) {
+        	size(400, 400); // Define el tamaño del canvas
+
+        	background(193, 3, 240);
+        	var x = 200;
+			var y = 250;
+
+			noStroke();
+			fill(30, 204, 91); // a nice froggy green!
+
+			ellipse(x, y, 200, 100); // face
+			ellipse(x - 50, y - 50, 40, 40); // left eye socket
+			ellipse(x + 50, y - 50, 40, 40); // right eye socket
+
+			fill(255, 255, 255); // for the whites of the eyes!
+			ellipse(x - 50, y - 50, 30, 30); // left eyeball
+			ellipse(x + 50, y - 50, 30, 30); // right eyeball
+
+
+			fill(0, 0, 0);
+			ellipse(x, y , 120, 60);
+
+			rect(x - 55, y - 50, 10, 10);
+			rect(x + 45, y - 50, 10, 10);
+
+        }
+    };
+
+
+
+    // Instancia el canvas y pasar la función 
+    //var canvas = document.getElementById("miLienzo");
+    //var instanc = new Processing(canvas, txt);
+    var canvas = document.getElementById("miLienzo1");
+    var instanc = new Processing(canvas, CodigoDePrograma1);
+    var canvas = document.getElementById("miLienzo2");
+    var instanc = new Processing(canvas, CodigoDePrograma2);
+    var canvas = document.getElementById("miLienzo3");
+    var instanc = new Processing(canvas, CodigoDePrograma3);
+    var canvas = document.getElementById("miLienzo4");
+    var instanc = new Processing(canvas, CodigoDePrograma4);
+    var canvas = document.getElementById("miLienzo5");
+    var instanc = new Processing(canvas, CodigoDePrograma5);
+    // Pasa la función al constructor de ProcessingJS
+    
+    
+    
+    
+    
+</script>
+</html>
+
